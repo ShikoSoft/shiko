@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shiko</string>
+    <string name="title_home">Əsas</string>
+    <string name="title_dashboard">Panel</string>
+    <string name="title_notifications">Bildirişlər</string>
+</resources>
