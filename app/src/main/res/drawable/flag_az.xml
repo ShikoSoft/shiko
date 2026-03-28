@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="42dp"
+    android:viewportWidth="64"
+    android:viewportHeight="42">
+
+    <path android:fillColor="#0092BC" android:pathData="M0,0H64V14H0Z"/>
+    <path android:fillColor="#EF3340" android:pathData="M0,14H64V28H0Z"/>
+    <path android:fillColor="#509E2F" android:pathData="M0,28H64V42H0Z"/>
+
+    <!-- Ay: böyük ağ dairə minus kiçik örtücü dairə ilə əmələ gəlir -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M32,21m-5.5,0a5.5,5.5 0,1,0 11,0a5.5,5.5 0,1,0 -11,0"/>
+    <path android:fillColor="#EF3340"
+        android:pathData="M33.5,21m-4.2,0a4.2,4.2 0,1,0 8.4,0a4.2,4.2 0,1,0 -8.4,0"/>
+
+    <!-- Səkkizguşəli ulduz -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M40,21 L40.6,22.8 L42.5,22.8 L41,23.9 L41.6,25.7 L40,24.6 L38.4,25.7 L39,23.9 L37.5,22.8 L39.4,22.8Z"/>
+</vector>

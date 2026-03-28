@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="42dp"
+    android:viewportWidth="64"
+    android:viewportHeight="42">
+
+    <!-- Mavi fon -->
+    <path android:fillColor="#012169"
+        android:pathData="M0,0H64V42H0Z"/>
+
+    <!-- Ağ diaqonal zolaqlar (Andreas xaçı) -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M0,0 L7,0 L64,37 L64,42 L57,42 L0,5Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M64,0 L57,0 L0,37 L0,42 L7,42 L64,5Z"/>
+
+    <!-- Qırmızı diaqonal zolaqlar (Patrik xaçı, ofset ilə) -->
+    <path android:fillColor="#C8102E"
+        android:pathData="M0,0 L4,0 L64,39.4 L64,42 L60,42 L0,2.6Z"/>
+    <path android:fillColor="#C8102E"
+        android:pathData="M64,0 L60,0 L0,39.4 L0,42 L4,42 L64,2.6Z"/>
+
+    <!-- Ağ üfüqi və şaquli xaç (Georgi xaçı) -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M27,0H37V42H27Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M0,16H64V26H0Z"/>
+
+    <!-- Qırmızı üfüqi və şaquli xaç -->
+    <path android:fillColor="#C8102E"
+        android:pathData="M29,0H35V42H29Z"/>
+    <path android:fillColor="#C8102E"
+        android:pathData="M0,18H64V24H0Z"/>
+</vector>
