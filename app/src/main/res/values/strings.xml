@@ -4,4 +4,7 @@
     <string name="title_home">Əsas</string>
     <string name="title_dashboard">Panel</string>
     <string name="title_notifications">Bildirişlər</string>
+    <string name="label_language">Dil seçin</string>
+    <string name="label_enter_word">Söz daxil edin</string>
+    <string name="hint_enter_word">Buraya yazın…</string>
 </resources>
