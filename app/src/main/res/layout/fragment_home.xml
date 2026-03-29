@@ -8,86 +8,96 @@
     android:padding="16dp"
     tools:context=".ui.home.HomeFragment">
 
-    <!-- Dil seçimi başlığı -->
-    <TextView
-        android:id="@+id/label_language"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_language"
-        android:textSize="14sp"
-        android:textColor="?attr/colorOnSurface"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <!-- Bayraq düymələri -->
+    <!-- Dil seçimi paneli -->
     <LinearLayout
-        android:id="@+id/layout_flags"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:id="@+id/layout_lang_bar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:background="@drawable/bg_word_input"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_language">
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <ImageView
-            android:id="@+id/flag_az"
-            android:layout_width="72dp"
-            android:layout_height="48dp"
-            android:padding="4dp"
-            android:src="@drawable/flag_az"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/lang_az"
+        <!-- Sol dil seçici (3 dil) -->
+        <LinearLayout
+            android:id="@+id/btn_from"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"/>
+            android:background="?attr/selectableItemBackground">
 
+            <ImageView
+                android:id="@+id/flag_from"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/flag_az"
+                android:contentDescription="@null"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_dropdown_arrow"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+        <!-- Swap düyməsi -->
         <ImageView
-            android:id="@+id/flag_en"
-            android:layout_width="72dp"
+            android:id="@+id/btn_swap"
+            android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginStart="12dp"
-            android:padding="4dp"
-            android:src="@drawable/flag_en"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/lang_en"
+            android:padding="8dp"
+            android:src="@drawable/ic_swap"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"/>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cd_swap_langs"/>
 
-        <ImageView
-            android:id="@+id/flag_ru"
-            android:layout_width="72dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="12dp"
-            android:padding="4dp"
-            android:src="@drawable/flag_ru"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/lang_ru"
+        <!-- Sağ dil seçici (2 dil) -->
+        <LinearLayout
+            android:id="@+id/btn_to"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"/>
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/flag_to"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/flag_en"
+                android:contentDescription="@null"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_dropdown_arrow"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
 
     </LinearLayout>
-
-    <!-- Söz daxiletmə başlığı -->
-    <TextView
-        android:id="@+id/label_word"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/label_enter_word"
-        android:textSize="14sp"
-        android:textColor="?attr/colorOnSurface"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_flags"/>
 
     <!-- Söz daxiletmə sahəsi -->
     <EditText
         android:id="@+id/edit_word"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/bg_word_input"
         android:gravity="top|start"
         android:hint="@string/hint_enter_word"
@@ -97,6 +107,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_word"/>
+        app:layout_constraintTop_toBottomOf="@id/layout_lang_bar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
