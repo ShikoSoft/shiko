@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.home.HomeFragment">
+
+    <!-- Dil seçimi paneli -->
+    <LinearLayout
+        android:id="@+id/layout_lang_bar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_word_input"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Sol dil seçici (3 dil) -->
+        <LinearLayout
+            android:id="@+id/btn_from"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/flag_from"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/flag_az"
+                android:contentDescription="@null"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_dropdown_arrow"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+        <!-- Swap düyməsi -->
+        <ImageView
+            android:id="@+id/btn_swap"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_swap"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cd_swap_langs"/>
+
+        <!-- Sağ dil seçici (2 dil) -->
+        <LinearLayout
+            android:id="@+id/btn_to"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/flag_to"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/flag_en"
+                android:contentDescription="@null"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_dropdown_arrow"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Söz daxiletmə sahəsi -->
+    <EditText
+        android:id="@+id/edit_word"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_word_input"
+        android:gravity="top|start"
+        android:hint="@string/hint_enter_word"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:padding="12dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_lang_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

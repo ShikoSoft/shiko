@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; echo \"$f\" | grep -qE '\\.(java|xml|gradle)$' || exit 0; content=$(cat \"$f\" 2>/dev/null | head -100); jq -n --arg f \"$f\" --arg c \"$content\" '{\"hookSpecificOutput\":{\"hookEventName\":\"PostToolUse\",\"additionalContext\":(\"CODE REVIEW for \\($f):\\nPlease review this file for bugs, code quality issues, and improvements (3-5 bullet points):\\n```\\n\\($c)\\n```\")}}'; } 2>/dev/null || true",
+            "statusMessage": "Kod review edilir...",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
